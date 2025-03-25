@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adv. Lakhi Lohia - Legal & Tax Consultant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="founder.jpg" alt="Adv. Lakhi Lohia" class="profile-img">
+            <h1>Advocate Lakhi Lohia</h1>
+            <h2 class="slogan">M.Com, LLB | Legal & Taxation Expert</h2>
+            <div class="achievements">
+                <img src="certificate.jpg" alt="Professional Achievement" class="award-img">
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#payment">Make Payment</a></li>
+        </ul>
+    </nav>
+
+    <section id="about" class="content-section">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <img src="professional-photo.jpg" alt="Professional Photo" class="about-img">
+            <div class="bio">
+                <p>With 12+ years in taxation and 8+ years in legal practice, I bring comprehensive expertise in:</p>
+                <ul>
+                    <li>Income Tax & GST Compliance</li>
+                    <li>Corporate Law Advisory</li>
+                    <li>Debt Recovery Solutions</li>
+                    <li>Digital Business Integration</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="content-section">
+        <h2>Professional Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Tax Solutions</h3>
+                <p>GST Filing • Income Tax • TDS Compliance</p>
+            </div>
+            <div class="service-card">
+                <h3>Legal Services</h3>
+                <p>Company Registration • Trademarks • Contracts</p>
+            </div>
+            <div class="service-card">
+                <h3>Financial Advisory</h3>
+                <p>Auditing • Budgeting • Debt Management</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="payment" class="content-section">
+        <h2>Secure Payment</h2>
+        <div class="payment-box">
+            <div class="upi-payment">
+                <img src="QR-CODE-GPAY-ADV-LAKHI-LOHIA.jpg" alt="UPI QR Code" class="qr-code">
+                <div class="upi-details">
+                    <p>UPI ID: <strong>lakhilohia23@oksbi</strong></p>
+                    <button onclick="copyUPI()">Copy UPI ID</button>
+                </div>
+            </div>
+            <p class="payment-note">After payment, share screenshot on WhatsApp: 7002926537</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2024 Lohia Consultancy Services</p>
+            <div class="contact-info">
+                <p>📧 advlakhilohia@gmail.com</p>
+                <p>📞 7002926537</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function copyUPI() {
+            navigator.clipboard.writeText("lakhilohia23@oksbi")
+                .then(() => alert("UPI ID copied to clipboard!"))
+                .catch(err => console.error("Copy failed:", err));
+        }
+    </script>
+</body>
+</html>

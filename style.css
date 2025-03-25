@@ -1,0 +1,223 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #f8f9fa;
+    color: #2c3e50;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #0b1f47, #1f3b6b);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid #ffcc00;
+    margin-bottom: 1.5rem;
+}
+
+.slogan {
+    color: #ffcc00;
+    font-size: 1.4rem;
+    margin: 0.5rem 0;
+}
+
+.achievements {
+    margin-top: 1.5rem;
+}
+
+.award-img {
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Navigation */
+nav {
+    background: #1f3b6b;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: #ffcc00;
+    color: #1f3b6b;
+}
+
+/* Content Sections */
+.content-section {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #1f3b6b;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+}
+
+/* About Section */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.about-img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.bio ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.bio li {
+    padding: 0.8rem;
+    background: #e9ecef;
+    margin-bottom: 0.5rem;
+    border-left: 4px solid #ffcc00;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card h3 {
+    color: #1f3b6b;
+    margin-bottom: 1rem;
+}
+
+/* Payment Section */
+.payment-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.upi-payment {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.qr-code {
+    width: 200px;
+    border: 2px solid #1f3b6b;
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+.upi-details {
+    flex: 1;
+}
+
+button {
+    background: #1f3b6b;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0b1f47;
+}
+
+.payment-note {
+    color: #e74c3c;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Footer */
+footer {
+    background: #1f3b6b;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .upi-payment {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}

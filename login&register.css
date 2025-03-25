@@ -1,0 +1,63 @@
+/* Authentication Styles */
+.auth-container {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: #1f3b6b;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #1f3b6b;
+    outline: none;
+}
+
+.social-login {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.g-signin2 {
+    display: inline-block;
+}
+
+/* Terms Checkbox */
+.form-group input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+    .auth-container {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+}

@@ -1,0 +1,64 @@
+// Registration Form Handling
+document.getElementById('registerForm')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const userData = {
+        name: document.getElementById('fullName').value.trim(),
+        email: document.getElementById('email').value.trim(),
+        phone: document.getElementById('phone').value.trim(),
+        address: document.getElementById('address').value.trim(),
+        password: document.getElementById('password').value
+    };
+
+    if(validateRegistration(userData)) {
+        // Submit handling
+        console.log('Registration Data:', userData);
+        alert('Registration successful! Redirecting to login...');
+        window.location.href = 'login.html';
+    }
+});
+
+function validateRegistration(data) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^[6-9]\d{9}$/;
+
+    if (!emailRegex.test(data.email)) {
+        alert('Please enter a valid email address');
+        return false;
+    }
+
+    if (!phoneRegex.test(data.phone)) {
+        alert('Please enter a valid 10-digit phone number');
+        return false;
+    }
+
+    if (data.password.length < 8) {
+        alert('Password must be at least 8 characters');
+        return false;
+    }
+
+    return true;
+}
+
+// Login Form Handling
+document.getElementById('loginForm')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const loginData = {
+        email: document.getElementById('loginEmail').value.trim(),
+        password: document.getElementById('loginPassword').value
+    };
+
+    // Login validation
+    console.log('Login Attempt:', loginData);
+    window.location.href = 'index.html';
+});
+
+// Google Sign-In Callback
+function onGoogleSignIn(googleUser) {
+    const profile = googleUser.getBasicProfile();
+    console.log('Google Sign-In:', {
+        id: profile.getId(),
+        name: profile.getName(),
+        email: profile.getEmail()
+    });
+    window.location.href = 'index.html';
+}
